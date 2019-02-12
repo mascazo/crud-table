@@ -1,0 +1,254 @@
+/* main styles */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+  color: #0F2417;
+  font-size: 1.25em; /* 20px */
+  font-family: 'Ubuntu', sans-serif;
+}
+
+input {
+  background-color: #E0E3F0;
+  border: 1px solid #0C2427;
+  border-radius: 3px;
+  /* Отступ в 5px для создания отступа тексту и повышения его читабельности*/
+  padding-left: 5px;
+}
+
+input:focus {
+  background-color: #fff;
+}
+
+button {
+  background-color: #E0E3F0;
+  border: 1px solid #0C2427;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #fff;
+  transition: .5s ease;
+}
+
+button:not(hover) {
+  transition: .5s ease;
+}
+
+table {
+  background-color: #E0E3F0;
+  border: 1px solid grey;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 1vh;
+  border: 1px solid grey;
+}
+td {
+  height: 4vh;
+  width: 4vw;
+  padding: 0 .5vw;
+  border: 1px solid grey;
+}
+
+/* styles for app heading and search form */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 40vw;
+  margin-top: 10vh;
+  padding: 0 20px 20px 20px;
+
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.app__inactive-mask {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: .7;
+}
+
+.app__header {
+  width: calc(40vw + 40px);
+  background-color: #fff5c6;
+  text-align: center;
+}
+
+.app__header-p {
+  font-size: 1.2em; /* 24px */
+  font-weight: 700;
+}
+
+.app__search-form {
+  display: flex;
+  justify-content: space-between;
+
+  width: 40vw;
+  padding: 3vh 0;
+}
+
+.app__search-form-input {
+  height: 3.5vh;
+  width: 10vw;
+  padding: 0 1vw;
+}
+
+.app__search-form-button {
+  /* 2px - разница в высоте между формой ввода и кнопкой формы */
+  height: calc(3.5vh + 2px);
+  width: 4vw;
+  /* 5px - значение отступа формы ввода: padding-left: 5px */
+  margin-left: calc(3vw - 5px);
+}
+
+.app__add-new-product-button {
+  height: calc(3.5vh + 2px);
+  width: 8vw;
+  margin-left: 2vw;
+  padding: 0 1vw;
+}
+
+/* styles for app data table */
+.app__data {
+  width: 40vw;
+}
+
+.app__table-name-cell {
+  width: 23vw;
+}
+
+.app__table-price-cell {
+  width: 9vw;
+}
+
+.app__table-actions-cell {
+  width: 5vw;
+}
+
+.app__table-sort-triangle {
+  float: right;
+  cursor: pointer;
+  transition: 1s ease;
+  user-select: none;
+}
+
+.app__table-name-value {
+  border-right: 0;
+}
+
+.app__table-count-value {
+  border-left: 0;
+  text-align: right;
+}
+
+.app__table-actions-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* styles for app add, delete and edit modules  */
+
+.app__module {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+
+  z-index: 10;
+}
+
+.app__module-form-header {
+  width: 20vw;
+  background-color: #fff5c6;
+}
+
+.app__module-form-header-p {
+  text-align: center;
+  font-weight: 700;
+}
+
+.app__module-form-confirm-action {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1vh;
+}
+
+.app__module-form-confirm-action-add {
+  height: 4vh;
+  width: 5vw;
+  background-color: #90EE90;
+}
+
+.app__module-form-confirm-action-cancel {
+  height: 4vh;
+  width: 5vw;
+  background-color: #F08080;
+}
+
+.app__module-form-confirm-action-add:hover {
+  background-color: #32CD32;
+}
+
+.app__module-form-confirm-action-cancel:hover {
+  background-color: #CD5C5C;
+}
+
+.app__module-form {
+  display: none;
+  flex-direction: column;
+
+  width: 20vw;
+  padding-bottom: 2vh;
+
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.app__module-form-input-block {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 0 20px;
+}
+
+.app__module-form-input-block-text {
+  padding-bottom: 1vh;
+}
+
+.app__module-form-input-block-element {
+  height: 3.5vh;
+  width: 10vw;
+}
+
+.app__module-form-input-block-error-text {
+  height: .7em;
+  color: #F2223C;
+  font-size: .7em; /* 14px */
+}
+
+.app__module-form-delete-text{
+  text-align: center;
+  padding: 1.5vh 0;
+}
