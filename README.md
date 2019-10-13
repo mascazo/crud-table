@@ -2,4 +2,4 @@
 minificated with css.nano and uglify.js
 
 link:
-https://mascazo.github.io/crud-table/dist/
+https://underpath.github.io/crud-table/dist/
